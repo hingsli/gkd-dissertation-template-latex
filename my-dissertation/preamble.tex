@@ -17,12 +17,17 @@
 \usepackage{titlesec} % For customizing section titles
 \usepackage{enumitem} % For customizing lists
 
+
 % XeLaTeX settings
-\setmainfont{Times New Roman} % Main font
-\setCJKmainfont{STFangsong} % Chinese font
+\setmainfont{FangSong_GB2312} % Main font
+\setCJKmainfont{FangSong_GB2312} % Chinese font
+
+% Define a command for bold text using the CJK font
+\newcommand{\cjkbold}[1]{{\CJKfontspec{FangSong_GB2312}[FakeBold=3.0] #1}}
+
 
 % Page geometry
-\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+\geometry{left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
 % Line spacing
 \onehalfspacing
@@ -54,5 +59,7 @@
     filecolor=magenta,
     urlcolor=cyan,
 }
+
+\newcommand{\studentinfo}[2]{\makebox[5cm][c]{#1}\makebox[8cm][c]{#2}}
 
 
