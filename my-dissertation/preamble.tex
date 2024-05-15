@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{report}
+
+% Package imports
+\usepackage{fontspec} % For using system fonts
+\usepackage{xeCJK} % For Chinese characters
+\usepackage{amsmath} % For mathematical symbols and equations
+\usepackage{graphicx} % For including graphics
+\usepackage{float} % For better control over floating elements (figures, tables)
+\usepackage{caption} % For customizing captions
+\usepackage{subcaption} % For subfigures and subtables
+\usepackage{booktabs} % For better table formatting
+\usepackage{hyperref} % For hyperlinks
+\usepackage{geometry} % For customizing page dimensions
+\usepackage{setspace} % For setting line spacing
+\usepackage{fancyhdr} % For fancy headers and footers
+\usepackage[nottoc]{tocbibind} % To include the bibliography in the table of contents
+\usepackage{titlesec} % For customizing section titles
+\usepackage{enumitem} % For customizing lists
+
+% XeLaTeX settings
+\setmainfont{Times New Roman} % Main font
+\setCJKmainfont{STFangsong} % Chinese font
+
+% Page geometry
+\geometry{left=2.5cm, right=2.5cm, top=3cm, bottom=3cm}
+
+% Line spacing
+\onehalfspacing
+
+% Header and footer settings
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \fancyhead[L]{\leftmark}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0.4pt}
+}
+\pagestyle{plain}
+
+% Section title settings
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{\thechapter}{2em}{}
+\titleformat{\section}[hang]
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}[hang]
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}[hang]
+  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% Hyperlink settings
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+

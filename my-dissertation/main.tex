@@ -1,0 +1,49 @@
+% Main document
+\input{preamble.tex}
+
+\begin{document}
+
+% Title Page
+\title{Dissertation Title}
+\author{Your Name}
+\date{\today}
+\maketitle
+
+% Abstract
+\begin{abstract}
+    \input{abstract.tex}
+\end{abstract}
+
+% Acknowledgments
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\input{acknowledgments.tex}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% Chapters
+\chapter{Chapter 1 Title}
+\input{chapters/chapter1.tex}
+
+\chapter{Chapter 2 Title}
+\input{chapters/chapter2.tex}
+
+\chapter{Chapter 3 Title}
+\input{chapters/chapter3.tex}
+
+% Appendices
+\appendix
+\chapter{Appendix 1 Title}
+\input{appendices/appendix1.tex}
+
+\chapter{Appendix 2 Title}
+\input{appendices/appendix2.tex}
+
+% Bibliography
+\newpage
+\bibliographystyle{apalike}
+\bibliography{bibliography.bib}
+
+\end{document}
