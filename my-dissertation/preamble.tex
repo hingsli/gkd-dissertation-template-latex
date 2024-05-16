@@ -17,6 +17,7 @@
 \usepackage{titlesec} % For customizing section titles
 \usepackage{enumitem} % For customizing lists
 
+\usepackage{array}
 
 % XeLaTeX settings
 \setmainfont{FangSong_GB2312} % Main font
@@ -24,6 +25,11 @@
 
 % Define a command for bold text using the CJK font
 \newcommand{\cjkbold}[1]{{\CJKfontspec{FangSong_GB2312}[FakeBold=3.0] #1}}
+
+% Define a new font family for SimHei
+\setCJKfamilyfont{heiti}{STHeiti}
+
+\newcommand{\heiti}{\CJKfamily{heiti}}
 
 
 % Page geometry
@@ -35,7 +41,7 @@
 % Header and footer settings
 \fancypagestyle{plain}{
     \fancyhf{}
-    \fancyhead[L]{\leftmark}
+    \fancyhead[C]{\fontsize{11}{11}\selectfont\heiti{广州科技职业技术大学毕业设计说明书}}
     \fancyfoot[C]{\thepage}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
