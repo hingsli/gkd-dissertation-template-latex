@@ -17,7 +17,10 @@
 \usepackage{titlesec} % For customizing section titles
 \usepackage{enumitem} % For customizing lists
 
+
+\usepackage{indentfirst}
 \usepackage{array}
+\usepackage{tocloft}
 
 % XeLaTeX settings
 \setmainfont{Times New Roman} % Main font
@@ -31,12 +34,14 @@
 
 \newcommand{\heiti}{\CJKfamily{heiti}}
 
-
 % Page geometry
 \geometry{left=3cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
 
-% Line spacing
-\onehalfspacing
+
+% Set line spacing for the entire document
+\setstretch{1} % This sets a default line spacing factor
+% Set specific baseline skip for the entire document
+\setlength{\baselineskip}{21pt} % Set line spacing to 21pt
 
 % Header and footer settings
 \fancypagestyle{plain}{
@@ -47,15 +52,34 @@
 }
 \pagestyle{plain}
 
+% Redefine the title of the Table of Contents
+\renewcommand{\contentsname}{目\hspace{1em}录}
+
+% Customizing the ToC title font
+\renewcommand{\cfttoctitlefont}{\hfill\heiti\fontsize{18pt}{21pt}\selectfont}
+\renewcommand{\cftaftertoctitle}{\hfill}
+
+% Set paragraph indent for the entire document
+\setlength{\parindent}{2em} % Set paragraph indent to 2 characters
+
 % Section title settings
+% Customizing the chapter title
 \titleformat{\chapter}[hang]
-  {\normalfont\huge\bfseries}{\thechapter}{2em}{}
+{\heiti\fontsize{14pt}{21pt}\selectfont\bfseries}{第\thechapter\ 章\hspace{1em}}{0pt}{}
+\titlespacing*{\chapter}{0pt}{14pt}{14pt}
+
+
+% Customizing the section title
 \titleformat{\section}[hang]
-  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+{\heiti\fontsize{12pt}{21pt}\selectfont\bfseries}{\thesection \hspace{1em}}{0pt}{}
+\titlespacing*{\section}{0pt}{12pt}{0pt}
+
+
+% Customizing the subsection title
 \titleformat{\subsection}[hang]
-  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}[hang]
-  {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+{\heiti\fontsize{12pt}{21pt}\selectfont\bfseries}{\thesubsection \hspace{1em}}{0pt}{}
+\titlespacing*{\subsection}{2em}{6pt}{0pt}
+
 
 % Hyperlink settings
 \hypersetup{
